@@ -22,7 +22,9 @@ router.get('/new', (req, res) => {
 })
 
 router.post("/", (req, res) => {
-  res.send("POST /places stub");
+  console.log(req.body);
+  res.send("POST /places");
 });
+
 
 module.exports = router;
