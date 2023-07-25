@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 // GET /places
-router.get('/', (req, res) => {
+router.get('/new', (req, res) => {
   let places = [
     {
       name: "H-Thai-ML",
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
       pic: '/images/cyberpunk-restaurant.jpg',
     },
   ];
-  res.render("places/index", { places });
+  res.render('places/new', { places });
 })
 
 
