@@ -25,5 +25,4 @@ function index(data) {
     </Def>
   );
 }
-
 module.exports = index;
