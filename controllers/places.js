@@ -2,9 +2,16 @@ const router = require("express").Router();
 const places = require("../models/places.js");
 
 // GET /places
-router.get('/new', (req, res) => {
-  res.render('places/new', { places });
-})
+router.get("/:id", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    res.render("places/show", { place: places[id] });
+  }
+});
 
 router.post("/", (req, res) => {
   if (!req.body.pic) {
@@ -18,7 +25,7 @@ router.post("/", (req, res) => {
     req.body.state = "USA";
   }
   places.push(req.body);
-  res.redirect('/places');
+  res.redirect("/places");
 });
 
 module.exports = router;
