@@ -42,3 +42,10 @@ nav a:hover {
   text-decoration: none;
 }
 /* END NAV */
+
+/* FOOTER */
+footer {
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+/* END FOOTER */

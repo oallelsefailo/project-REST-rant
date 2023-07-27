@@ -1,6 +1,7 @@
 const React = require("react");
 
 function Def(html) {
+  const currentYear = new Date().getFullYear();
   return (
     <html>
       <head>
@@ -26,6 +27,9 @@ function Def(html) {
       </nav>
 
       <body>{html.children}</body>
+      <footer className="d-flex justify-content-end align-items-end fixed-bottom">
+        <span>Author: Brandon &copy; 2020-{currentYear}</span>
+      </footer>
     </html>
   );
 }
