@@ -10,7 +10,7 @@ function new_form() {
             <div className="col-md-6">
               <h1>Add a New Place</h1>
               <form method="POST" action="/places">
-                <div className="form-group">
+                <div className="form-group col-sm-6">
                   <label htmlFor="name">Place Name</label>
                   <input
                     className="form-control"
@@ -19,17 +19,21 @@ function new_form() {
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group col-sm-6">
                   <label htmlFor="pic">Place Picture</label>
                   <input className="form-control" id="pic" name="pic" />
                 </div>
-                <div className="form-group">
+                <div className="form-group col-sm-4">
                   <label htmlFor="city">City</label>
                   <input className="form-control" id="city" name="city" />
                 </div>
-                <div className="form-group">
+                <div className="form-group col-sm-4">
                   <label htmlFor="state">State</label>
                   <input className="form-control" id="state" name="state" />
+                </div>
+                <div className="form-group col-sm-4">
+                  <label for="founded">Founded Year</label>
+                  <input className="form-control" id="founded" name="founded" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="cuisines">Cuisines</label>
